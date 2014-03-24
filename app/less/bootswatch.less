@@ -1,0 +1,309 @@
+// Simplex 3.1.1
+// Bootswatch
+// -----------------------------------------------------
+
+.btn-shadow(@color) {
+  #gradient > .vertical-three-colors(lighten(@color, 3%), @color, 6%, darken(@color, 3%));
+  filter: none;
+  border: 1px solid darken(@color, 10%);
+}
+
+// Navbar =====================================================================
+
+// Buttons ====================================================================
+
+.btn {
+  font-family: @headings-font-family;
+}
+
+.btn-default,
+.btn-default:hover {
+  .btn-shadow(@btn-default-bg);
+}
+
+.btn-primary,
+.btn-primary:hover {
+  .btn-shadow(@btn-primary-bg);
+}
+
+.btn-success,
+.btn-success:hover {
+  .btn-shadow(@btn-success-bg);
+}
+
+.btn-info,
+.btn-info:hover {
+  .btn-shadow(@btn-info-bg);
+}
+
+.btn-warning,
+.btn-warning:hover {
+  .btn-shadow(@btn-warning-bg);
+}
+
+.btn-danger,
+.btn-danger:hover {
+  .btn-shadow(@btn-danger-bg);
+}
+
+// Typography =================================================================
+
+body {
+  font-weight: 200;
+}
+
+// Tables =====================================================================
+
+th {
+  color: @headings-color;
+}
+
+// Forms ======================================================================
+
+legend {
+  color: @headings-color;
+}
+
+.has-warning {
+  .help-block,
+  .control-label {
+    color: @brand-danger;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-danger;
+  }
+}
+
+.has-error {
+  .help-block,
+  .control-label {
+    color: @brand-primary;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-primary;
+  }
+}
+
+.has-success {
+  .help-block,
+  .control-label {
+    color: @brand-success;
+  }
+
+  .form-control,
+  .form-control:focus {
+    border-color: @brand-success;
+  }
+}
+
+// Navs =======================================================================
+
+.pager {
+  a {
+    color: @headings-color;
+  }
+
+  a:hover,
+  .active > a, {
+    border-color: @brand-primary;
+    color: #fff;
+  }
+
+  .disabled > a {
+    border-color: @pager-border;
+  }
+}
+
+// Indicators =================================================================
+
+// Progress bars ==============================================================
+
+// Containers =================================================================
+
+body{
+  background: url(/images/grid_noise.png) repeat;
+  background: #E8E9EE;
+}
+
+.gradient-flat{
+    border-top: 1px solid  rgba(0,0,0,0.7);
+    background: linear-gradient(to bottom, #D8D8D8 0%,#fcfcfc 100%); 
+}
+
+#site{
+  box-shadow: 0px 0px 12px rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.3);
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @body-bg;
+  margin-bottom: 50px;
+
+  background: @body-bg url(/images/dev.png) no-repeat 50px 90px;
+}
+#site > div.container{
+}
+
+.container{
+  width: 96%;
+  margin-left: 2%%;
+  margin-right: 2%%;
+}
+
+
+@media (min-width: 450px){
+    #site{
+      margin-top: 40px;
+    }
+
+    .container{
+      width: 94%;
+      margin-left: 3%%;
+      margin-right: 3%%;
+    }
+}
+
+
+// Map angular class to bootstrap
+
+ng-valid{
+  .has-success
+}
+ng-invalid{
+  .has-error
+}
+ng-pristine{
+  .has-warning
+}
+ng-dirty{
+  .has-warning
+}
+
+#qrcode{
+  padding: 10px;
+  background: #fff;
+  img{
+      width: 100%;
+  }
+}
+
+.panel{
+  border: none;
+}
+#loader{
+  background: rgba(100,100,100,0.5);
+  position: absolute;
+  width: 100%;
+  min-height: 80px;
+  text-align: center;
+  z-index: 1000;
+}
+a.tablink{
+  color:@gray-light;
+}
+a.tablink:hover, a.tablink.current{
+    color:white;
+}
+.out{
+  color: #6B8089;
+}
+.invoice{
+  color: @link-color;
+  cursor: pointer;
+}
+.invoice:hover{
+  text-decoration: underline;
+}
+.inverse-color{
+  color: #fff;
+  background: #363838;
+}
+
+.inverse-color h1, .inverse-color h2, .inverse-color h3, .inverse-color h4{
+  color: #fff;
+}
+
+.timer {
+  position:relative;
+  font-size: 80px;
+  width:1em;
+  height:1em;
+  float: left;
+  color: #fff;
+}
+.timer > .percent {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  width: 80px;
+  font-size: 0.2em;
+  text-align:center;
+}
+.timer > #slice {
+  position:absolute;
+  width:1em;
+  height:1em;
+  clip:rect(0px,1em,1em,0.5em);
+}
+.timer > .background{
+  clip:rect(auto, auto, auto, auto);
+   -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em; 
+  border-radius:0.5em; 
+  position:absolute;
+  width:1em;
+  height:1em;
+  background: #454949;
+}
+.timer > #slice.gt50 {
+  clip:rect(auto, auto, auto, auto);
+}
+.timer > #slice > .pie {
+  border: 0.1em solid #fff;
+  position:absolute;
+  width:1em; /* 1 - (2 * border width) */
+  height:1em; /* 1 - (2 * border width) */
+  clip:rect(0em,0.5em,1em,0em);
+  -moz-border-radius:0.5em;
+  -webkit-border-radius:0.5em; 
+  border-radius:0.5em; 
+}
+.timer > #slice > .pie.fill {
+  -moz-transform:rotate(180deg) !important;
+  -webkit-transform:rotate(180deg) !important;
+  -o-transform:rotate(180deg) !important;
+  transform:rotate(180deg) !important;
+}
+.timer.fill > .percent {
+  display: none;
+}
+.timer.fill > #slice > .pie {
+  border: transparent;
+  background-color: #c0c0c0;
+  width:1em;
+  height:1em;
+}
+tr.panel-heading{
+  background: @btn-default-bg;
+  th{
+   color: #fff; 
+  }
+ 
+}
+/*#welcome{
+  background: url(/images/fili.png) no-repeat 150px 80px;
+}*/
+#moreinfo .caret{
+  -ms-transform: rotate(0deg); /* IE 9 */
+  -webkit-transform: rotate(0deg); /* Chrome, Safari, Opera */
+  transform: rotate(0deg);
+}
+#moreinfo.collapsed .caret{
+  -ms-transform: rotate(270deg); /* IE 9 */
+  -webkit-transform: rotate(270deg); /* Chrome, Safari, Opera */
+  transform: rotate(270deg);
+}
