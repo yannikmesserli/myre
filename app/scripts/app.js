@@ -43,6 +43,18 @@ var app = angular.module('myre', [
       templateUrl: 'views/home.html',
       controller: 'HomeCtrl'
     })
+    .when('/projects', {
+      templateUrl: 'views/projects.html',
+      controller: 'ProjectsCtrl'
+    })
+    .when('/academic', {
+      templateUrl: 'views/academic.html',
+      controller: 'AcademicCtrl'
+    })
+    .when('/aboutme', {
+      templateUrl: 'views/aboutme.html',
+      controller: 'AboutmeCtrl'
+    })
     .otherwise({
         redirectTo: '/'
     });
@@ -72,7 +84,8 @@ var app = angular.module('myre', [
         $('#loader').height($('#site').height());
         $('#loader').width($('#site').width());
         
-
+        console.log($location.path());
+        
         $rootScope.isViewLoading = true;
     });
 

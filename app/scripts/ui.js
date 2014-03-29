@@ -1,3 +1,8 @@
 'use strict';
 
-// $.backstretch('images/background.jpg');
+$(document).ready(function(){
+	// $.backstretch('images/background.jpg');
+	// TOOLTIP
+	
+	//console.log($('.tooltiptoggle'));
+})

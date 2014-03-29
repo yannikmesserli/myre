@@ -11,10 +11,9 @@
     "angular-route": "1.2.6",
     "bootstrap": "*",
     "jquery-backstretch": "*",
-    "qrcodejs": "git://github.com/davidshimjs/qrcodejs.git",
     "restangular": "*",
     "lodash":"*",
-    "bitcoin-address": "git://github.com/defunctzombie/bitcoin-address.git"
+    "font-awesome": "*"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",
